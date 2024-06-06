@@ -1,8 +1,15 @@
 { inputs, system, ... }: rec {
   withConfig = config:
-    inputs.nixvim.legacyPackages.${system}.makeNixvimWithModule {
-      module = import ./module // config;
-      extraSpecialArgs = { inherit inputs; };
-    };
+    let
+      inherit (inputs) nixpkgs nixvim;
+      nixvim' = nixvim.legacyPackages.${system};
+      pkgs = import nixpkgs { inherit system; };
+      nyanvim = nixvim'.makeNixvimWithModule {
+        inherit pkgs;
+        module = import ./module;
+        extraSpecialArgs = { inherit inputs; };
+      };
+    in nyanvim.nixvimExtend config;
+
   default = withConfig { };
 }
