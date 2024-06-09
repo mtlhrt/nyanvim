@@ -3,7 +3,7 @@
     ./opts.nix
     ./maps.nix
     ./plugins
-    ./ui.nix
+    ./ui
     ./lsp.nix
     ./menus.nix
     ./user_commands.nix

@@ -1,22 +1,7 @@
-{ pkgs, ... }:
-let colorscheme = "rose-pine";
-in {
-  inherit colorscheme;
-  colorschemes.${colorscheme} = {
-    enable = true;
-    settings = {
-      variant = "moon";
-      styles = {
-        italic = false;
-        transparency = true;
-      };
-    };
-  };
+{ pkgs, ... }: {
+  imports = [ ./colorscheme.nix ];
   plugins = {
-    lualine = {
-      enable = true;
-      theme = colorscheme;
-    };
+    lualine = { enable = true; };
     cursorline = {
       enable = true;
       cursorline = {

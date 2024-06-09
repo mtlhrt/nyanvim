@@ -6,7 +6,7 @@ it's messy and still taking its shape, but feel free to use or reference it.
 add this repository as an input to your flake:
 ```nix
 {
-    inputs.nyanvim.url = "github:lambdys/nyanvim";
+    inputs.nyanvim.url = "github:comfybyte/nyanvim";
 }
 ```
 
