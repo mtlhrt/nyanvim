@@ -19,13 +19,15 @@ in {
     ];
     viselectMaps = [
       (mkV "<leader>y" ''"+y'')
+      (mkV "K" ":m '<-2<CR>gv=gv")
+      (mkV "J" ":m '>+1<CR>gv=gv")
       {
         mode = "v";
         key = "<leader>po";
         action = ''"_dP'';
         options = {
           noremap = true;
-          desc = "Paste over ";
+          desc = "Paste over";
         };
       }
     ];
