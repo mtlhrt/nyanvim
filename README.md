@@ -1,12 +1,12 @@
 # nyanvim
 my [Neovim](https://neovim.io/) configuration, built with [Nixvim](https://github.com/nix-community/nixvim).
-it's messy and still taking its shape, but feel free to use or reference it.
+might or not soon be deprecated in favour of [`mtlhrt/patchy`](https://github.com/mtlhrt/patchy).
 
 ## usage
 add this repository as an input to your flake:
 ```nix
 {
-    inputs.nyanvim.url = "github:comfybyte/nyanvim";
+    inputs.nyanvim.url = "github:mtlhrt/nyanvim";
 }
 ```
 
@@ -29,7 +29,3 @@ so for [Home Manager](https://github.com/nix-community/home-manager) you can do:
 ```
 
 et voilá.
-
-***
-### useful links
-- [Nixvim user guide](https://nix-community.github.io/nixvim/user-guide/) on Github.
